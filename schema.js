@@ -27,17 +27,17 @@ const schema = buildSchema(`
     getFriend(id: ID): Friend
   }
 
-  type FriendInput {
+  input FriendInput {
     id: ID
     firstName: String
     lastName: String
     gender: String
     email: String
     age: Int
-    contact: [ContactInput]
+    contacts: [ContactInput]
   }
 
-  tyoe ContactInput {
+  input ContactInput {
     firstName: String
     lastName: String
   }
