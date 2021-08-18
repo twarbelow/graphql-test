@@ -37,10 +37,10 @@ export const resolvers = {
           else resolve(friend)
         })
       })
-    }
+    },
     deleteFriend: (root, { id }) => {
       Friends.remove({ _id: id}, (err) => {
-        if err reject(err)
+        if (err) reject(err)
         else resolve('Successfully deleted friend')
       })
     }
