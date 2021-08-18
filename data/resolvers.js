@@ -45,6 +45,6 @@ export const resolvers = {
           else resolve('Successfully deleted friend')
         })
       })
-    },
+    }
   },
 };
