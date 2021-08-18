@@ -1,4 +1,4 @@
-import { Friends } from './dbConntectors';
+import { Friends, Aliens } from './dbConntectors';
 
 // resolver map
 
@@ -10,7 +10,7 @@ export const resolvers = {
   },
   Mutation: {
     createFriend: (root, {input}) => {
-      const newFriend = new friendDatabase({
+      const newFriend = new Friends({
         firstName: input.firstName,
         lastName: input.lastName,
         gender: input.gender,
