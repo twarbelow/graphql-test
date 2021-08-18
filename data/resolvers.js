@@ -11,10 +11,10 @@ export const resolvers = {
   Mutation: {
     createFriend: (root, {input}) => {
       const newFriend = new friendDatabase({
-        firstName = input.firstName,
-        lastName = input.lastName,
-        gender = input.gender,
-        email = input.email,
+        firstName: input.firstName,
+        lastName: input.lastName,
+        gender: input.gender,
+        email: input.email,
       });
 
       newFriend.id - newFriend._id;
