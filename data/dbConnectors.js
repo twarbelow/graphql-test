@@ -53,7 +53,7 @@ Aliens.sync({ force: true}).then(() => {
     Aliens.create({
       firstName: casual.first_name,
       lastName: casual.last_name,
-      plant: casual.password,
+      planet: casual.word,
     })
   })
 })
