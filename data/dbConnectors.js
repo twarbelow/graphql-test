@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose, { mongo } from 'mongoose';
 import Sequelize from 'sequelize';
 import _ from 'lodash';
 import casual from 'casual';
@@ -10,7 +10,7 @@ mongoose.connect('mongodb://localhost/friends', {
   useUnifiedTopology: true
 });
 
-const friendsSchema = new mongoose.Schema({
+const friendSchema = new mongoose.Schema({
   firstName: {
     type: String
   },
@@ -34,19 +34,19 @@ const friendsSchema = new mongoose.Schema({
   }
 });
 
-const Friends = mongoose.model('friends', friendsSchema)
+const Friends = mongoose.model('friends', friendSchema)
 
 // SQL Connection, runs a sql database locally via line 42
 const sequelize = new Sequelize('database', null, null, {
   dialect: 'sqlite',
   storage: './alien.sqlite',
-})
+});
 
 const Aliens = sequelize.define('aliens', {
   firstName: { type: Sequelize.STRING},
-  lastName = { type: Sequelize.STRING},
-  planet = { type: Sequelize.STRING},
-})
+  lastName: { type: Sequelize.STRING},
+  planet: { type: Sequelize.STRING},
+});
 
 export { Friends };
 export { Aliens };

@@ -40,7 +40,7 @@ const typeDefs = `
     id: ID
     firstName: String
     lastName: String
-    gender: String
+    gender: Gender
     language: String
     email: String
     age: Int
@@ -57,6 +57,6 @@ const typeDefs = `
   }
 `;
 
-const schema = makeExecutableSchema({ typeDefs, resolvers })
+const schema = makeExecutableSchema({ typeDefs, resolvers });
 
 export { schema };

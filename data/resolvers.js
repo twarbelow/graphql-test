@@ -1,4 +1,4 @@
-import { Friends, Aliens } from './dbConntectors';
+import { Friends, Aliens } from './dbConnectors';
 
 // resolver map
 
@@ -20,11 +20,11 @@ export const resolvers = {
         contacts: input.contacts,
       });
 
-      newFriend.id - newFriend._id;
+      newFriend.id = newFriend._id;
 
       return new Promise((resolve, object) => {
         newFriend.save((err) => {
-          if (err) PromiseRejectionEvent(err)
+          if (err) reject(err)
           else resolve(newFriend)
         })
       })
