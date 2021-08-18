@@ -14,7 +14,10 @@ export const resolvers = {
         firstName: input.firstName,
         lastName: input.lastName,
         gender: input.gender,
+        language: input.language,
+        age: input.age,
         email: input.email,
+        contacts: input.contacts,
       });
 
       newFriend.id - newFriend._id;
